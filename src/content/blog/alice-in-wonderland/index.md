@@ -1,7 +1,7 @@
 ---
 title: Alice in Wonderland (1865)
 description: A girl falls through a rabbit hole.
-publicationDate: 2033-03-04
+publicationDate: 2033-03-03
 ---
 
 ## 1. Down the Rabbit-Hole
