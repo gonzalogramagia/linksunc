@@ -7,6 +7,31 @@ import Favicons from "@/components/Favicons.astro";
 ---
 
 <head>
+  <!-- Open Graph (usado por WhatsApp, Facebook, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={SITE.name} />
+  <meta
+    property="og:description"
+    content="Yendo al ritmo de FAMAF. Links útiles de Compu."
+  />
+  <meta property="og:url" content={Astro.site} />
+  <meta
+    property="og:image"
+    content="https://goalritmo.com/imagen-personalizada.jpg"
+  />
+
+  <!-- Twitter Card (usado por X/Twitter) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={SITE.name} />
+  <meta
+    name="twitter:description"
+    content="Yendo al ritmo de FAMAF. Links útiles de Compu."
+  />
+  <meta
+    name="twitter:image"
+    content="https://goalritmo.com/imagen-personalizada.jpg"
+  />
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="HandheldFriendly" content="True" />
