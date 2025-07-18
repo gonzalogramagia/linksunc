@@ -8,10 +8,15 @@
     {
       "id": "1750397736741",
       "icon": "youtube",
-      "url": "https://www.youtube.com/@goalritmo/playlists"
+      "url": "https://www.youtube.com/watch?v=NyJQ9PGYJnA&ab_channel=Yendoalritmo"
     }
   ],
   "customLinks": [
+    {
+      "id": "1728534585737",
+      "title": "🗃 Ir a Guaraní (Autogestión UNC)",
+      "url": "https://goalritmo.com"
+    },
     {
       "id": "1728534585738",
       "title": "🔗 Links de Análisis Matemático I",
