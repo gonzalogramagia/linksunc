@@ -21,7 +21,7 @@ import CustomLink from "@/components/CustomLink.astro";
     SITE.customLinks.map((link) => {
       return (
         <li>
-          <CustomLink url={link.url}>{link.title}</CustomLink>
+          <CustomLink url={link.url} text={link.title}>{link.title}</CustomLink>
         </li>
       );
     })

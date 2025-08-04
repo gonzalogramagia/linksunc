@@ -1,16 +1,13 @@
 ---
 const { text, icon, url } = Astro.props;
 
-// Obtener el contenido del slot para detectar el emoji 🔗
-const slotContent = await Astro.slots.render('default');
-const hasLinkEmoji = slotContent.includes('🔗');
+const hasLinkEmoji = text && text.includes('🔗');
 
-// Crear una etiqueta única basada en el contenido
 const createEventLabel = (content) => {
-  // Remover emojis y caracteres especiales, mantener solo texto
-  const cleanText = content.replace(/[🔗🗃🏫⚡]/g, '').trim();
+  if (!content) return 'unknown';
   
-  // Mapear nombres específicos a etiquetas mejoradas
+  const cleanText = content.replace(/[🔗🗃🏫⚡→]/g, '').trim();
+  
   const labelMap = {
     'Guaraní (Autogestión UNC)': 'guarani',
     'Aula Virtual de FAMAF': 'aula_virtual',
@@ -19,24 +16,23 @@ const createEventLabel = (content) => {
     'Curso de Ingreso 2026': 'links_ingreso'
   };
   
-  // Buscar si hay un mapeo específico
   for (const [key, value] of Object.entries(labelMap)) {
     if (cleanText.includes(key)) {
       return `tree_${value}`;
     }
   }
   
-  // Si no hay mapeo específico, usar el texto limpio
   return `tree_${cleanText.toLowerCase().replace(/\s+/g, '_')}`;
 };
 
-const eventLabel = createEventLabel(slotContent);
+const eventLabel = createEventLabel(text);
 ---
 
 <li>
   <a
     href={url}
     onclick={`gtag('event', 'click', { 'event_category': 'custom_link', 'event_label': '${eventLabel}', 'link_url': '${url}', 'has_link_emoji': ${hasLinkEmoji} });`}
+    {...(hasLinkEmoji ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
     class={`hover:bg-lightModeCustomLinkBackgroundHover dark:hover:bg-darkModeCustomLinkBackgroundHover hover:ring-lightModeCustomLinkOutlineHover dark:hover:ring-darkModeCustomLinkOutlineHover hover:text-lightModeCustomLinkTextHover dark:hover:text-lightModeCustomLinkTextHover flex items-center justify-center gap-2 rounded-full bg-lightModeCustomLinkBackground px-6 py-3 text-lg text-lightModeCustomLinkText ring-2 ring-lightModeCustomLinkOutline transition-colors dark:bg-darkModeCustomLinkBackground dark:text-darkModeCustomLinkText dark:ring-darkModeCustomLinkOutline ${hasLinkEmoji ? 'underline underline-offset-4' : ''}`}
   >
     <slot />
