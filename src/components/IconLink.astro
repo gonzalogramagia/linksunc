@@ -11,7 +11,7 @@ const { icon, url } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
     onclick={`gtag('event', 'click', { 'event_category': 'icon_link', 'event_label': 'tree_${icon}', 'link_url': '${url}' });`}
-    class="bg-lightModeIconLinkBackground dark:bg-darkModeIconLinkBackground hover:bg-lightModeIconLinkBackgroundHover dark:hover:bg-darkModeIconLinkBackgroundHover hover:ring-lightModeIconLinkOutlineHover dark:hover:ring-darkModeIconLinkOutlineHover group block rounded-full p-3 ring-2 ring-lightModeIconLinkOutline transition-colors dark:ring-darkModeIconLinkOutline"
+    class="bg-lightModeIconLinkBackground dark:bg-darkModeIconLinkBackground hover:bg-lightModeIconLinkBackgroundHover dark:hover:bg-darkModeIconLinkBackgroundHover hover:ring-lightModeIconLinkOutlineHover dark:hover:ring-darkModeIconLinkOutlineHover group block rounded-full p-3 ring-2 ring-lightModeIconLinkOutline transition-all duration-300 hover:scale-105 dark:ring-darkModeIconLinkOutline"
   >
     <Icon
       name={icon}

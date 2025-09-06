@@ -33,7 +33,7 @@ const eventLabel = createEventLabel(text);
     href={url}
     onclick={`gtag('event', 'click', { 'event_category': 'custom_link', 'event_label': '${eventLabel}', 'link_url': '${url}', 'has_link_emoji': ${hasLinkEmoji} });`}
     {...(hasLinkEmoji ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
-    class={`hover:bg-lightModeCustomLinkBackgroundHover dark:hover:bg-darkModeCustomLinkBackgroundHover hover:ring-lightModeCustomLinkOutlineHover dark:hover:ring-darkModeCustomLinkOutlineHover hover:text-lightModeCustomLinkTextHover dark:hover:text-lightModeCustomLinkTextHover flex items-center justify-center gap-2 rounded-full bg-lightModeCustomLinkBackground px-6 py-3 text-lg text-lightModeCustomLinkText ring-2 ring-lightModeCustomLinkOutline transition-colors dark:bg-darkModeCustomLinkBackground dark:text-darkModeCustomLinkText dark:ring-darkModeCustomLinkOutline ${hasLinkEmoji ? 'underline underline-offset-4' : ''}`}
+    class={`hover:bg-lightModeCustomLinkBackgroundHover dark:hover:bg-darkModeCustomLinkBackgroundHover hover:ring-lightModeCustomLinkOutlineHover dark:hover:ring-darkModeCustomLinkOutlineHover hover:text-lightModeCustomLinkTextHover dark:hover:text-lightModeCustomLinkTextHover flex items-center justify-center gap-2 rounded-full bg-lightModeCustomLinkBackground px-6 py-3 text-lg text-lightModeCustomLinkText ring-2 ring-lightModeCustomLinkOutline transition-all duration-300 hover:scale-105 dark:bg-darkModeCustomLinkBackground dark:text-darkModeCustomLinkText dark:ring-darkModeCustomLinkOutline ${hasLinkEmoji ? 'underline underline-offset-4' : ''}`}
   >
     <slot />
   </a>
