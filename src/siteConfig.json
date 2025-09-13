@@ -2,13 +2,13 @@
   "name": "Yendo al ritmo",
   "bio": "💛",
   "profilePicture": "/profile-picture.jpg",
-  "url": "https://www.goalritmo.com",
+  "url": "https://goalritmo.com",
   "blog": true,
   "iconLinks": [
     {
       "id": "1750397736741",
       "icon": "youtube",
-      "url": "https://www.youtube.com/watch?v=NyJQ9PGYJnA&ab_channel=Yendoalritmo"
+      "url": "https://youtu.be/watch?v=NyJQ9PGYJnA&ab_channel=Yendoalritmo"
     }
   ],
   "customLinks": [
@@ -19,23 +19,18 @@
     },
     {
       "id": "1728534585738",
-      "title": "🏫 Aula Virtual de FAMAF",
-      "url": "https://famaf.aulavirtual.unc.edu.ar/login/index.php"
+      "title": "🔗 Algoritmos I →",
+      "url": "https://algoritmos1.com"
     },
     {
       "id": "1728534585739",
-      "title": "🔗 Carrera de Compu →",
-      "url": "https://carrera.goalritmo.com"
-    },
-    {
-      "id": "1728534585740",
       "title": "🔗 Bienestar Estudiantil →",
       "url": "https://bien.estate"
     },
     {
-      "id": "1728534585741",
+      "id": "1728534585740",
       "title": "🤝 Taller de Ajedrez",
-      "url": "https://ajedrez.goalritmo.com"
+      "url": "https://ajedrezfamaf.com"
     }
   ]
 }
